@@ -39,6 +39,42 @@
           <p>Les decisions doivent etre tracables et explicables.</p>
         </article>
       </section>
+      <section class="lead-panel" aria-labelledby="lead-title">
+        <div>
+          <p class="tag">Demande pilote</p>
+          <h2 id="lead-title">Cadrer un besoin CopyBot sans action automatique.</h2>
+          <p>
+            Le formulaire prepare un message WhatsApp et conserve une copie locale.
+            Aucun signal, ordre ou conseil financier n'est envoye automatiquement.
+          </p>
+        </div>
+        <form class="lead-form" onsubmit="prepareCopybotLead(event)">
+          <label>
+            Nom ou projet
+            <input id="lead-name" placeholder="Nom, societe ou projet" />
+          </label>
+          <label>
+            Contact
+            <input id="lead-contact" placeholder="WhatsApp ou email" />
+          </label>
+          <label>
+            Besoin
+            <select id="lead-need">
+              <option>Audit strategy</option>
+              <option>Paper trading</option>
+              <option>Dashboard suivi</option>
+              <option>Alertes controlees</option>
+            </select>
+          </label>
+          <label>
+            Contexte
+            <textarea id="lead-context" placeholder="Ce qu'il faut tester, suivre ou securiser"></textarea>
+          </label>
+          <button type="submit">Preparer la demande</button>
+          <p id="lead-feedback" class="lead-feedback" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
